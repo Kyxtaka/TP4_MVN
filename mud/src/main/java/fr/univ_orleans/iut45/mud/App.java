@@ -1,5 +1,4 @@
 package fr.univ_orleans.iut45.mud;
-
 /**
  * Hello world!
  *
