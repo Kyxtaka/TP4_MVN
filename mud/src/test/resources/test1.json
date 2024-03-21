@@ -1,4 +1,7 @@
 {
     "name" : "Box1",
-    "thing" : {"value" : 10 }
+    "thing" : {
+        "capacity" : 10,
+        "listStr" : ["a", "b"]  
+    }
 }

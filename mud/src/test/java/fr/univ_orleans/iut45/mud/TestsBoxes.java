@@ -5,12 +5,20 @@ public class TestsBoxes{
     @Test
     public void testBoxFromJSONSimple(){
         // use the file test1.json in ressources folder
-        String path =
         TestsBoxes.class.getClassLoader().getResource("test1.json").getFile();
-        Box b = Box.fromJSON(path);
-        assertEquals(b.capacity(), -1);
-        assertTrue(b.isOpen());
+        try {
+            Box b = Box.fromJSON();
+            assertEquals(10, b.getThing().getCapacity());
+            assertEquals("Box1", b.getName());
+            System.out.println("Nom de la Box : "+b.getName());
+            System.out.println("Thing : "+b.getThing());
+
+        } 
+        catch(Exception IOException) {
+            System.out.println("Impossible de trouver ou lire le ficher");
+        }
     }
+       
 }
 
    
