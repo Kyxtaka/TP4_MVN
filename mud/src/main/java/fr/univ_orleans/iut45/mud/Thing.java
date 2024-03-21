@@ -8,18 +8,18 @@ import java.util.List;
 public class Thing {
     private int capacity;
     private List<String> listStr;
-    //private Map<String,int> inventory;
-    
+    private Map<String,Integer> inventory;
+
     public Thing(int value) {
         this.capacity = value;
         this.listStr = new ArrayList<>();
-        // this.inventory = new HashMap<>();
+        this.inventory = new HashMap<>();
     }
 
     public Thing() {
         this.capacity = 0;
         this.listStr = new ArrayList<>();
-        // this.inventorgetCapacityy = new HashMap<>();
+        this.inventory = new HashMap<>();
     }
 
     public int getCapacity() {
@@ -36,5 +36,13 @@ public class Thing {
 
     public void setListStr(List<String> listStr) {
         this.listStr = listStr;
+    }
+
+    public Map<String, Integer> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Map<String, Integer> inventory) {
+        this.inventory = inventory;
     }
 }
